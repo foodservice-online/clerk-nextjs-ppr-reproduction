@@ -38,7 +38,7 @@ export default function Home() {
             <strong>Dynamic route with loading</strong> - doesn't work, direct copy of "dynamic page with loading"  ❌
           </Link>
           <Link href="/search-params?foo=bar">
-            <strong>Page with search params</strong> -
+            <strong>Page with search params</strong> - works fine, we can access search params and it doesn't break PPR ✅
           </Link>
         </div>
       </main>
