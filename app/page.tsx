@@ -37,6 +37,9 @@ export default function Home() {
           <Link href='/dynamic-route-3/123'>
             <strong>Dynamic route with loading</strong> - doesn't work, direct copy of "dynamic page with loading"  ❌
           </Link>
+          <Link href="/search-params?foo=bar">
+            <strong>Page with search params</strong> -
+          </Link>
         </div>
       </main>
     </div>
