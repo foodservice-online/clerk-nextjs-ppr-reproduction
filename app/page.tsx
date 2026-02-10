@@ -17,7 +17,25 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-6">
           <Link href='/static-page'>
-            Static page - works fine
+            <strong>Static page</strong> - works fine ✅
+          </Link>
+          <Link href='/sign-in'>
+            <strong>Sign in page</strong> - works fine with routing="hash" but not with routing="path" (suspect same issue as dynamic routes) ❓
+          </Link>
+          <Link href='/protected'>
+            <strong>Protected page</strong> - works fine using proxy.ts to protect this route ✅
+          </Link>
+          <Link href='/dynamic-page'>
+              <strong>Dynamic page with loading</strong> - works fine, we access auth data, page is suspended correctly and PPR works ✅
+          </Link>
+          <Link href='/dynamic-route/123'>
+            <strong>Dynamic route with static content</strong> - doesn't work, we don't access auth data, just static content, but it still breaks PPR for dynamic routes ❌
+          </Link>
+          <Link href='/dynamic-route-2/123'>
+            <strong>Dynamic route with loading</strong> - doesn't work, we don't access auth data, just static data but we try to suspend anyway, but it still breaks PPR for dynamic routes ❌
+          </Link>
+          <Link href='/dynamic-route-3/123'>
+            <strong>Dynamic route with loading</strong> - doesn't work, direct copy of "dynamic page with loading"  ❌
           </Link>
         </div>
       </main>
